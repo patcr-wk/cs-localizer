@@ -1,0 +1,14 @@
+{
+    "ENVIRONMENT":"development",
+    "DELIVERY_TOKEN": "csb67924132456eff746da80b9",
+    "MANAGEMENT_TOKEN": "cs58beb795a1543cf2c508380f",
+    "API_KEY": "blt15ad871ba49b8a41",
+    "FOR_TRANSLATION_ASSET_FOLDER":{
+        "FOLDER_NAME":"Ready To Translate",
+        "FOLDER_UID":"blt666d0f70326d3a94"
+    },
+    "TRANSLATED_ASSET_FOLDER":{
+        "FOLDER_NAME":"Translated Files",
+        "FOLDER_UID":"blta8933df3a9d781b3"
+    }
+}
