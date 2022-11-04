@@ -83,15 +83,19 @@ app.post('/entryConfig', function (req, res) {
 
  if (!fs.existsSync(zip)){
  fs.mkdirSync(zip);
+ console.log(zip +" Directory Created");
 }
 if (!fs.existsSync(Localize)){
 fs.mkdirSync(Localize);
+console.log(Localize +" Directory Created");
 }
 if (!fs.existsSync(copies)){
 fs.mkdirSync(copies);
+console.log(copies +" Directory Created");
 }
 if (!fs.existsSync(uploads)){
 fs.mkdirSync(uploads);
+console.log(uploads +" Directory Created");
 }
 
  const entry = {
