@@ -33,7 +33,6 @@ app.get("/download", (req, res) => {
   try {
     setTimeout(() => services.getentry(res), 1000);
   } catch (error) {
-    console.log("---111---", error)
     res.status(500).send(error);
   }
 });

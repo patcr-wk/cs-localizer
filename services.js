@@ -36,7 +36,6 @@ const getentry = (res) => {
 			},
 			function error(err) {
 				// err objectd
-    console.log("---333---", error)
 				res.status(500).send(err);
 			}
 		)
@@ -100,7 +99,6 @@ function copyEntry(res, fileUid) {
 				res.status(200).send({ zipfilePath: 'public/zip/' + JSON.parse(fs.readFileSync('./entryConfig.json')).content_type + '-' + fileUid + '.zip' });	
 			})
 			.catch(function (error) {
-				console.log("---222---", error)
 				res.status(500).send(error);
 			});
 	}
@@ -121,9 +119,6 @@ function updateEntry() {
 			var content = JSON.parse(file_content);
 			var locale = content.locale;
 			var newlocale = file.replace("-" + pfiles, "");
-
-			//console.log(locale);
-			//console.log(newlocale);
 
 			ciqlJson.open(dirPath).set("locale", newlocale).save();
 		}
