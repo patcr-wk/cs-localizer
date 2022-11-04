@@ -9312,7 +9312,7 @@
               children: (0, r.jsx)("input", {
                 type: "button",
                 onClick: function () {
-                  fetch("http://localhost:5000/download/")
+                  fetch("https://localizer-cs.herokuapp.com/download/")
                     .then(function (e) {
                       return e.json();
                     })
