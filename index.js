@@ -30,12 +30,19 @@ app.use(fileUpload());
 app.use(express.static(path.join(__dirname + "/public")))
 app.use("/public", express.static("public"));
 app.get('/download', (req, res) => {
+  if (!req.body.name) {
+    return res.status(400).json({
+      status: 'error',
+      error: 'req body cannot be empty',
+    });
+  }
+  else{
   try {
     setTimeout(services.getentry(res),1000);
   } catch (error) {
     res.status(500).send(error);
   }
-
+  }
 });
 
 app.get('/localize', (req, res) => {
