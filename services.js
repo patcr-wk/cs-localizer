@@ -36,6 +36,7 @@ const getentry = (res) => {
 			},
 			function error(err) {
 				// err objectd
+    console.log("---333---", error)
 				res.status(500).send(err);
 			}
 		)
@@ -99,6 +100,7 @@ function copyEntry(res, fileUid) {
 				res.status(200).send({ zipfilePath: 'public/zip/' + JSON.parse(fs.readFileSync('./entryConfig.json')).content_type + '-' + fileUid + '.zip' });	
 			})
 			.catch(function (error) {
+				console.log("---222---", error)
 				res.status(500).send(error);
 			});
 	}
