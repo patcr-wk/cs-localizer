@@ -23,8 +23,6 @@ const getentry = (res) => {
 		.fetch()
 		.then(
 			function success(entry) {
-				//console.log(entry); // Retrieve field value by providing a field's uid
-				//console.log(entry.toJSON()); // Convert the entry result object to JSON
 
 				const entryData = entry.toJSON();
 				const filename = "./public/Localize/" + entryData.uid + ".json";
