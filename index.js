@@ -111,3 +111,27 @@ app.post("/entryConfig", function (req, res) {
 });
 
 app.listen(PORT, () => console.log("Server Started..."));
+
+(function() {
+  var zip = "./public/zip";
+  var Localize = "./public/Localize";
+  var copies = "./public/copies";
+  var uploads = "./public/uploads";
+
+  if (!fs.existsSync(zip)) {
+    fs.mkdirSync(zip);
+    console.log(zip + " Directory Created");
+  }
+  if (!fs.existsSync(Localize)) {
+    fs.mkdirSync(Localize);
+    console.log(Localize + " Directory Created");
+  }
+  if (!fs.existsSync(copies)) {
+    fs.mkdirSync(copies);
+    console.log(copies + " Directory Created");
+  }
+  if (!fs.existsSync(uploads)) {
+    fs.mkdirSync(uploads);
+    console.log(uploads + " Directory Created");
+  }
+})();
