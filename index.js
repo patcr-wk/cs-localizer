@@ -10,7 +10,7 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const whitelist = ["https://cs-localizer.herokuapp.com/"]
+const whitelist = ["https://cs-localizer.herokuapp.com/","http://localhost:5000"]
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {

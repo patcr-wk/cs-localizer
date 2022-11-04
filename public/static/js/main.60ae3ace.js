@@ -9320,7 +9320,7 @@
                       if ((console.log(e), e && e.zipfilePath)) {
                         var t = document.createElement("a");
                         (t.href =
-                          "https://cs-localizer.herokuapp.com//" +
+                          "https://cs-localizer.herokuapp.com/" +
                           e.zipfilePath),
                           document.body.appendChild(t),
                           t.click(),
