@@ -31,7 +31,24 @@ app.use(express.static(path.join(__dirname + "/public")))
 
 app.get('/download', (req, res) => {
   try {
-    services.getentry(res);
+    var zip = './public/zip';
+    var Localize = './public/Localize';
+    var copies = './public/copies';
+    var uploads = './public/uploads';
+
+    if (!fs.existsSync(zip)){
+    fs.mkdirSync(zip);
+}
+if (!fs.existsSync(Localize)){
+  fs.mkdirSync(Localize);
+}
+if (!fs.existsSync(copies)){
+  fs.mkdirSync(copies);
+}
+if (!fs.existsSync(uploads)){
+  fs.mkdirSync(uploads);
+}
+    setTimeout(services.getentry(res),1000);
   } catch (error) {
     res.status(500).send(error);
   }
