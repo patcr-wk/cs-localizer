@@ -24,7 +24,7 @@ const getentry = (res) => {
 		.then(
 			function success(entry) {
 				//console.log(entry); // Retrieve field value by providing a field's uid
-				console.log(entry.toJSON()); // Convert the entry result object to JSON
+				//console.log(entry.toJSON()); // Convert the entry result object to JSON
 
 				const entryData = entry.toJSON();
 				const filename = "./public/Localize/" + entryData.uid + ".json";
@@ -77,7 +77,7 @@ function copyEntry(res, fileUid) {
 						// File destination.txt will be created or overwritten by default.
 						fs.copyFile(dir + "/" + file, newfile, (err) => {
 							if (err) throw err;
-							//console.log(newfile + " was copied to " + des);
+							console.log(newfile + " was copied to " + des);
 						});
 					}
 				};
@@ -139,7 +139,7 @@ function zipEntry() {
 
 		for (const file of files) {
 			//console.log(file);
-			//console.log(outputDir + file);
+			console.log(outputDir + file);
 			const zipfile = JSON.parse(fs.readFileSync('./entryConfig.json')).content_type + "-" + file.replace(".json", "") + ".zip";
 			// const zipfile = "download.zip";
 
