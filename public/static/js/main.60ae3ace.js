@@ -9320,7 +9320,7 @@
                       if ((console.log(e), e && e.zipfilePath)) {
                         var t = document.createElement("a");
                         (t.href =
-                          
+                          "http://localhost:5000/" +
                           e.zipfilePath),
                           document.body.appendChild(t),
                           t.click(),
