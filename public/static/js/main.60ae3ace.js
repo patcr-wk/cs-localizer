@@ -9316,16 +9316,16 @@
                     .then(function (e) {
                       return e.json();
                     })
-                    /*.then(function (e) {
+                    .then(function (e) {
                       if ((console.log(e), e && e.zipfilePath)) {
                         var t = document.createElement("a");
                         (t.href =
-                            "https://assets.contentstack.io/v3/assets/blt15ad871ba49b8a41/bltf02edecb12371fb1/6365393549e96d68fb65fcd3/nextstepssection-blt0d047b6e1ace05b2.zip"),
+                            e.zipFilePath),
                           document.body.appendChild(t),
                           t.click(),
                           t.parentNode.removeChild(t);
                       }
-                    })*/
+                    })
                     .catch(function (e) {
                       return console.error(e);
                     });
