@@ -9316,7 +9316,7 @@
                     .then(function (e) {
                       return e.json();
                     })
-                    .then(function (e) {
+                    /*.then(function (e) {
                       if ((console.log(e), e && e.zipfilePath)) {
                         var t = document.createElement("a");
                         (t.href =
@@ -9325,7 +9325,7 @@
                           t.click(),
                           t.parentNode.removeChild(t);
                       }
-                    })
+                    })*/
                     .catch(function (e) {
                       return console.error(e);
                     });
